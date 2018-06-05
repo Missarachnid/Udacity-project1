@@ -137,11 +137,11 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-
+  /**
+   * Picture element for responsive images.
+   */
   const picture = document.createElement('picture');
-
   let origin = DBHelper.imageUrlForRestaurant(restaurant);
-
   let imageName = origin.replace('.jpg', '').replace('/img/', '');
   let large = `/img/${imageName}-800_lg.jpg`;
   let small = `/img/${imageName}-400.jpg`;
@@ -169,8 +169,7 @@ createRestaurantHTML = (restaurant) => {
   picture.append(image);
   li.append(picture);
  
-  //console.log(imageName);
-  //li.append(image);
+ ;
 
   const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
