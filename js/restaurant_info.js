@@ -56,7 +56,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   address.innerHTML = restaurant.address;
 
   /**
-   * Add source elements to picture element and update the src of the image
+   * Add source elements to picture element and update the src of the image, so it will display correctly
    */
   const picture = document.getElementById('restaurant-pic');
   let origin  = DBHelper.imageUrlForRestaurant(restaurant);
