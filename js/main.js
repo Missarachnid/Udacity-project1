@@ -158,6 +158,10 @@ createRestaurantHTML = (restaurant) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  //Added role='button for imporoved screen reader use
+  more.setAttribute('role', 'button');
+  more.setAttribute('aria-label', `View details for ${restaurant.name}`);
+  more.addEventListener('keypress', ensureClick);
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
@@ -176,4 +180,15 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     });
     self.markers.push(marker);
   });
+}
+
+/**
+ * Function for keystroke eventlistener on View Details button. Makes sure spacebar clicks button.
+ */
+ensureClick = (e) => {
+  e.preventDefault();
+  let code = event.charCode || event.keyCode;
+    if((code === 32)|| (code === 13)){
+      e.target.click();
+  }
 }
