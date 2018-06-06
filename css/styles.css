@@ -77,20 +77,6 @@ nav h1 a {
     width: 50%;
 }
 
-/* ====================== Skip Link ====================== */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #f18200;
-  color: white;
-  padding: 8px;
-  z-index: 00;
-}
-.skip-link:focus {
-  top: 0;
-}
-
 
 /* Display list items side by side */
 #breadcrumb li {
@@ -106,7 +92,7 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #026dca;
+    color: #025fb1;
     text-decoration: none;
 }
 
@@ -114,6 +100,19 @@ nav h1 a {
 #breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
+}
+/* ====================== Skip Link ====================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #f18200;
+  color: white;
+  padding: 8px;
+  z-index: 00;
+}
+.skip-link:focus {
+  top: 0;
 }
 /* ====================== Map ====================== */
 #map {
@@ -189,10 +188,10 @@ nav h1 a {
   min-width: 100%;
 }
 #restaurants-list li h3 {
-  color: #f18200;
+  color: #cc6d00;
   font-family: Arial,sans-serif;
   font-size: 1.3rem;
-  font-weight: 200;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 1.3;
   margin: 20px 0 10px;
@@ -203,11 +202,12 @@ nav h1 a {
   font-size: 11pt;
 }
 #restaurants-list li a {
-  background-color: #f18200;
+  background-color: #cc6d00;
   border-bottom: 3px solid #eee;
   color: black;
   display: inline-block;
   font-size: 1rem;
+  font-weight: 700;
   margin: 15px 0 0;
   padding: 11px 30px 11px;
   text-align: center;
@@ -250,10 +250,10 @@ nav h1 a {
   width: 50%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #cc6d00;
   font-family: Arial,sans-serif;
   font-size: 20pt;
-  font-weight: 200;
+  font-weight: 700;
   letter-spacing: 0;
   margin: 15px 0 30px;
   text-transform: uppercase;
@@ -288,9 +288,9 @@ nav h1 a {
   padding: 30px 40px 80px;
 }
 #reviews-container h3 {
-  color: #f58500;
+  color: #cc6d00;
   font-size: 24pt;
-  font-weight: 300;
+  font-weight: 700;
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
@@ -330,10 +330,12 @@ nav h1 a {
   padding-top: 10px;
 }
 .rating {
-  background-color: #f18200;
+  background-color: #cc6d00;
   width: 84px;
+  color: black;
+  font-weight: 400;
   margin-left: 10px;
-  padding-left: 10px;
+  padding: 4px 0 4px 10px;
   border-radius: 4px;
 }
 .comments {
