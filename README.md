@@ -1,4 +1,22 @@
-# Mobile Web Specialist Certification Course
+# This is my code for the first part of the project for Udacity's Mobile Web Specialist Certification Course
+
+We were given the adress to a github repository with the starter project and had to make changes to fit the requirements
+
+###  The requirements are:
+*  Is the site UI compatible with a range of display sizes?
+*  Are images responsive?
+*  Are application elements visible and usable in all viewports?
+*  Are images accessible?
+*  Is focus used appropriately to allow easy navigation of the site?
+*  Are site elements defined semantically?
+*  Are pages that have been visited available offline?
+
+
+==================================================
+
+This is the information that was part of the original readme
+
+## Mobile Web Specialist Certification Course
 ---
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
