@@ -14,10 +14,14 @@
 <body class="inside">
   <!-- Beginning header -->
   <header>
+    <!-- Start Skip Link -->
+    <a class="skip-link" href="#restaurant-container" onkeypress="ensureClick()">Skip to main content</a>
+    <!-- End Skip Link -->
     <!-- Beginning nav -->
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
+    <!-- End nav -->
     <!-- Beginning breadcrumb -->
     <ul id="breadcrumb" aria-label="Breadcrumb">
       <li><a href="/">Home</a></li>
@@ -27,19 +31,15 @@
   </header>
   <!-- End header -->
 
-  <!-- Start Skip Link -->
-  <a class="skip-link" href="#restaurant-container">Skip to main content</a>
-  <!-- End Skip Link -->
-
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" role="application"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section id="restaurant-container">
+    <section id="restaurant-container" tabindex="-1">
       <h2 id="restaurant-name"></h2>
       <picture id="restaurant-pic">
       <img id="restaurant-img">
