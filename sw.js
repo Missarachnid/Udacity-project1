@@ -1,8 +1,18 @@
-const staticCacheName = 'restaurant-cache-v2';
+const staticCacheName = 'restaurant-cache-v1';
 const toCache = [
   '/',
   './index.html',
   './restaurant.html',
+  './restaurant.html?id=1',
+  './restaurant.html?id=2',
+  './restaurant.html?id=3',
+  './restaurant.html?id=4',
+  './restaurant.html?id=5',
+  './restaurant.html?id=6',
+  './restaurant.html?id=7',
+  './restaurant.html?id=8',
+  './restaurant.html?id=9',
+  './restaurant.html?id=10',
   './css/styles.css',
   './js/dbhelper.js',
   './js/main.js',
@@ -53,7 +63,7 @@ self.addEventListener('fetch', (event) => {
 });
 
 self.addEventListener('activate', function(event) {
-  var cacheWhitelist = ['restaurant-cache-v2'];
+  var cacheWhitelist = ['restaurant-cache-v1'];
 
   event.waitUntil(
     caches.keys().then((keyList) => {
