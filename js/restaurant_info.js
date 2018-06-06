@@ -144,6 +144,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  //Added some elements to create review div like the example
   const holder = document.createElement('div');
   const name = document.createElement('p');
   name.setAttribute('class', 'name');
@@ -176,6 +177,7 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
+  //Added aria-current attribute for accessiblity
   li.setAttribute('aria-current', 'page');
   li.innerHTML = restaurant.name;
   breadcrumb.appendChild(li);

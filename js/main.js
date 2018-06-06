@@ -168,8 +168,6 @@ createRestaurantHTML = (restaurant) => {
   picture.append(source4);
   picture.append(image);
   li.append(picture);
- 
- ;
 
   const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
@@ -187,6 +185,7 @@ createRestaurantHTML = (restaurant) => {
   more.innerHTML = 'View Details';
   //Added role='button for imporoved screen reader use
   more.setAttribute('role', 'button');
+  //Added aria-label for improved accessibility
   more.setAttribute('aria-label', `View details for ${restaurant.name}`);
   more.addEventListener('keypress', ensureClick);
   more.href = DBHelper.urlForRestaurant(restaurant);
