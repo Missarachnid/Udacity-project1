@@ -75,3 +75,6 @@ self.addEventListener('activate', function(event) {
     })
   );
 });
+
+/* I was greatly helped with this by the old files from the "Introducing the Service Worker" lessons from earlier in the course and 
+this page from Google https://developers.google.com/web/fundamentals/primers/service-workers/*/
