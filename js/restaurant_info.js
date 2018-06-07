@@ -58,23 +58,25 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   /**
    * Add source elements to picture element and update the src of the image, so it will display correctly
    */
+
   const picture = document.getElementById('restaurant-pic');
   let origin  = DBHelper.imageUrlForRestaurant(restaurant);
+  console.log('origin in rest', origin);
   let imageName = origin.replace('.jpg', '').replace('/img/', '');
-  let large = `/img/${imageName}-800_lg.jpg`;
   let small = `/img/${imageName}-400.jpg`;
+  console.log("small in rest", small);
   const source1 = document.createElement('source');
   source1.media = '(min-width: 1481px)';
-  source1.srcset = large;
+  source1.srcset = origin;
   const source2 = document.createElement('source');
-  source2.media = '(max-width: 1480px) and (min-width: 769)';
+  source2.media = '(max-width: 1480px) and (min-width: 769px)';
   source2.srcset = small;
   const source3 = document.createElement('source');
-  source3.media = '(max-width: 768) and (min-width: 490px)';
-  source3.srcset = large;
+  source3.media = '(max-width: 768px) and (min-width: 490px)';
+  source3.srcset = origin;
   const source4 = document.createElement('source');
-  source4.media = '(max-width: 489)';
-  source4.srset = small;
+  source4.media = '(max-width: 489px)';
+  source4.srcset = small;
   picture.append(source1);
   picture.append(source2);
   picture.append(source3);
@@ -83,7 +85,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
   image.alt = `An image of ${restaurant.name}`;
-  image.src = large;
+  image.src = origin;
   
 
   const cuisine = document.getElementById('restaurant-cuisine');
@@ -197,4 +199,14 @@ getParameterByName = (name, url) => {
   if (!results[2])
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+/**
+ * Function for keystroke eventlistener on View Details button. Makes sure spacebar clicks button.
+ */
+ensureClick = (e) => {
+  e.preventDefault();
+  let code = event.charCode || event.keyCode;
+    if((code === 32)|| (code === 13)){
+      e.target.click();
+  }
 }

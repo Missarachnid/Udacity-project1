@@ -140,27 +140,27 @@ createRestaurantHTML = (restaurant) => {
   /**
    * Picture element for responsive images.
    */
+
   const picture = document.createElement('picture');
   let origin = DBHelper.imageUrlForRestaurant(restaurant);
-  let imageName = origin.replace('.jpg', '').replace('/img/', '');
-  let large = `/img/${imageName}-800_lg.jpg`;
-  let small = `/img/${imageName}-400.jpg`;
+  let imageName = origin.replace('.jpg', '');
+  let small = `${imageName}-400.jpg`;
   const source1 = document.createElement('source');
   source1.media = '(min-width: 1481px)';
-  source1.srcset = large;
+  source1.srcset = origin;
   const source2 = document.createElement('source');
-  source2.media = '(max-width: 1480px) and (min-width: 769)';
+  source2.media = '(max-width: 1480px) and (min-width: 769px)';
   source2.srcset = small;
   const source3 = document.createElement('source');
-  source3.media = '(max-width: 768) and (min-width: 490px)';
-  source3.srcset = large;
+  source3.media = '(max-width: 768px) and (min-width: 490px)';
+  source3.srcset = origin;
   const source4 = document.createElement('source');
-  source4.media = '(max-width: 489)';
-  source4.srset = small;
+  source4.media = '(max-width: 489px)';
+  source4.srcset = small;
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.alt = `An image of ${restaurant.name}.`;
-  image.src = large;
+  image.src = origin;
 
   picture.append(source1);
   picture.append(source2);
