@@ -1,4 +1,5 @@
-# This is my code for the first part of the project for Udacity's Mobile Web Specialist Certification Course
+# This is my code for the first part of the project for 
+Udacity's Mobile Web Specialist Certification Course
 
 We were given the adress to a github repository with the starter project and had to make changes to fit the requirements
 
@@ -11,24 +12,37 @@ We were given the adress to a github repository with the starter project and had
 *  Are site elements defined semantically?
 *  Are pages that have been visited available offline?
 
+###  What I had to do to acheive this
+*  Make the site responseive through the use of a grid system - Flexbox
+*  Set breakpoints using css media queries
+*  Ensure the elements had he right Aria attributes
+*  Make sure correct elements are used to have correct tab order 
+*  The site can be navigated with keybord and mouse
+*  Make sure space bar keypress events allow for the same action as enter using JavaScript
+*  Add a service worker to cache elements for offline use
+*  Use picture and source elements along with srcset to serve different sized images depending on width
+*  Added alt text to every image
+ 
+
 
 ==================================================
 
-This is the information that was part of the original readme
 
-## Mobile Web Specialist Certification Course
+The information Below is part of the original README from the project
+
+### Mobile Web Specialist Certification Course
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
+##### _Three Stage Course Material Project - Restaurant Reviews_
 
-## Project Overview: Stage 1
+### Project Overview: Stage 1
 
 For the **Restaurant Reviews** projects, you will incrementally convert a static webpage to a mobile-ready web application. In **Stage One**, you will take a static design that lacks accessibility and convert the design to be responsive on different sized displays and accessible for screen reader use. You will also add a service worker to begin the process of creating a seamless offline experience for your users.
 
-### Specification
+#### Specification
 
 You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
 
-### What do I do from here?
+#### What do I do from here?
 
 1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
 
@@ -38,7 +52,7 @@ In a terminal, check the version of Python you have: `python -V`. If you have Py
 3. Explore the provided code, and make start making a plan to implement the required features in three areas: responsive design, accessibility and offline use.
 4. Write code to implement the updates to get this site on its way to being a mobile-ready website.
 
-### Note about ES6
+#### Note about ES6
 
 Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write. 
 
